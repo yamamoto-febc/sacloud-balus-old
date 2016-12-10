@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# 注:ポート番号は固定
+docker run -d \
+  --name $1 \
+  -p 8080:8080 \
+  -e SAKURACLOUD_ACCESS_TOKEN \
+  -e SAKURACLOUD_ACCESS_TOKEN_SECRET \
+  -e SAKURACLOUD_ZONES \
+  -e SAKURACLOUD_TRACE_MODE \
+  -e AZURE_SUBSCRIPTION_KEY \
+  -e SACLOUD_BALUS_PATH \
+  -e SACLOUD_BALUS_SECRET \
+  -e SACLOUD_BALUS_DEBUG \
+  $1:latest ${@:2}

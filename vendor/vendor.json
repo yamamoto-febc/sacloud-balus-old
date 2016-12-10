@@ -1,0 +1,31 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "QiixlQQNMp2KdLKBTsnH4LbIrgg=",
+			"path": "github.com/cryptix/wav",
+			"revision": "1fe9dcb1466c336a74825d1a7130912f72d12667",
+			"revisionTime": "2015-10-15T13:23:27Z"
+		},
+		{
+			"checksumSHA1": "zmC8/3V4ls53DJlNTKDZwPSC/dA=",
+			"path": "github.com/satori/go.uuid",
+			"revision": "b061729afc07e77a8aa4fad0a2fd840958f1942a",
+			"revisionTime": "2016-09-27T10:08:44Z"
+		},
+		{
+			"checksumSHA1": "kh6vjBcL75WqaT2a31NGLlcQ9U4=",
+			"path": "github.com/yamamoto-febc/sakura-iot-go",
+			"revision": "08ae5d7b06170429d3a6c3a1fec6ebf8f459589b",
+			"revisionTime": "2016-12-04T06:39:30Z"
+		},
+		{
+			"checksumSHA1": "exMnsyei9H9PgttMUskof6S2554=",
+			"path": "gopkg.in/urfave/cli.v2",
+			"revision": "e485446237011b8abac93919242e6f059ad56c87",
+			"revisionTime": "2016-10-29T22:39:47Z"
+		}
+	],
+	"rootPath": "github.com/yamamoto-febc/sacloud-balus"
+}
