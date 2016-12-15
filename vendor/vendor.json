@@ -9,16 +9,40 @@
 			"revisionTime": "2015-10-15T13:23:27Z"
 		},
 		{
+			"checksumSHA1": "dvabztWVQX8f6oMLRyv4dLH+TGY=",
+			"path": "github.com/davecgh/go-spew/spew",
+			"revision": "346938d642f2ec3594ed81d874461961cd0faa76",
+			"revisionTime": "2016-10-29T20:57:26Z"
+		},
+		{
+			"checksumSHA1": "LuFv4/jlrmFNnDb/5SCSEPAM9vU=",
+			"path": "github.com/pmezard/go-difflib/difflib",
+			"revision": "792786c7400a136282c1664665ae0a8db921c6c2",
+			"revisionTime": "2016-01-10T10:55:54Z"
+		},
+		{
 			"checksumSHA1": "zmC8/3V4ls53DJlNTKDZwPSC/dA=",
 			"path": "github.com/satori/go.uuid",
 			"revision": "b061729afc07e77a8aa4fad0a2fd840958f1942a",
 			"revisionTime": "2016-09-27T10:08:44Z"
 		},
 		{
-			"checksumSHA1": "kh6vjBcL75WqaT2a31NGLlcQ9U4=",
+			"checksumSHA1": "hIEmcd7hIDqO/xWSp1rJJHd0TpE=",
+			"path": "github.com/stretchr/testify/assert",
+			"revision": "18a02ba4a312f95da08ff4cfc0055750ce50ae9e",
+			"revisionTime": "2016-11-17T07:43:51Z"
+		},
+		{
+			"checksumSHA1": "Tvbe2Yh+fhxYDA/TVqq8uGT7a/E=",
 			"path": "github.com/yamamoto-febc/sakura-iot-go",
-			"revision": "08ae5d7b06170429d3a6c3a1fec6ebf8f459589b",
-			"revisionTime": "2016-12-04T06:39:30Z"
+			"revision": "fa92aeaaaeed380af86b6b5b72b10bc4ed51fb4e",
+			"revisionTime": "2016-12-15T21:19:43Z"
+		},
+		{
+			"checksumSHA1": "2pan2TNC2epIVgAktTWwD57mZm4=",
+			"path": "github.com/yamamoto-febc/sakura-iot-go/version",
+			"revision": "fa92aeaaaeed380af86b6b5b72b10bc4ed51fb4e",
+			"revisionTime": "2016-12-15T21:19:43Z"
 		},
 		{
 			"checksumSHA1": "exMnsyei9H9PgttMUskof6S2554=",
@@ -27,5 +51,5 @@
 			"revisionTime": "2016-10-29T22:39:47Z"
 		}
 	],
-	"rootPath": "github.com/yamamoto-febc/sacloud-balus"
+	"rootPath": "github.com/yamamoto-febc/sacloud-balus-old"
 }

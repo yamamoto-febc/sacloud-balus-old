@@ -2,7 +2,7 @@ package lib
 
 import (
 	"fmt"
-	"github.com/yamamoto-febc/sakura-iot-go"
+	sakura "github.com/yamamoto-febc/sakura-iot-go"
 	"log"
 	"net/http"
 	"os"
@@ -16,7 +16,7 @@ func Start(option *Option) error {
 
 	balusHandler := NewWebhookHandler(option, out)
 
-	handler := &sakura_iot_go.WebhookHandler{
+	handler := &sakura.WebhookHandler{
 		Secret:     option.Secret,
 		HandleFunc: balusHandler.HandleRequest,
 		Debug:      option.Debug,

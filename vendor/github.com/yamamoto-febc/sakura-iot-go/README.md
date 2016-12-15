@@ -2,14 +2,21 @@
 
 [さくらのIoT Platform](https://iot.sakura.ad.jp)との連携サービス用ライブラリ
 
-**This project is still developping.**
+**This project is still developing.**
+
+[![GoDoc](https://godoc.org/github.com/sacloud/libsacloud?status.svg)](https://godoc.org/github.com/yamamoto-febc/sakura-iot-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/sacloud/libsacloud)](https://goreportcard.com/report/github.com/yamamoto-febc/sakura-iot-go)
 
 
 ## 概要
 
 `sakura-iot-go`は以下を提供しています。
 
-- さくらのIoT Platformとの連携を行うためのライブラリ(HTTPハンドラ(net/http) + ペイロード用構造体の定義)
+- さくらのIoT Platformとの連携を行うためのライブラリ
+  - HTTPハンドラ(net/http)
+  - ペイロード用構造体の定義
+  - Webhook送信(さくらのIoT Platform上の"Incoming Webhook"へのPOST)
+
 - HTTPハンドラのサンプル実装としてエコーサーバー
 
 HTTPハンドラはさくらのIoT PlatformからのOutgoing Webhookを受信し、
@@ -21,7 +28,7 @@ HTTPハンドラはさくらのIoT PlatformからのOutgoing Webhookを受信し
 
 ## ライブラリとしての利用
 
-`net/http`ライブラリでHTTPサーバーを起動する例
+#### `net/http`ライブラリでHTTPサーバーを起動する例
 
 ```golang
 
@@ -50,6 +57,44 @@ func main() {
 	http.ListenAndServe(":8080", nil)
 }
 
+
+```
+
+#### さくらのIoT Platform上の"Incoming Webhook"へPOSTする例
+
+```golang
+package main
+
+import (
+	sakura "github.com/yamamoto-febc/sakura-iot-go"
+)
+
+func main() {
+
+	token := "[put your token]"
+	secret := "[empty or put your secret]"
+	module := "[put your module id]"
+
+	// create sender
+	sender := sakura.NewWebhookSender(token, secret)
+
+	// create Payload
+	p := sakura.NewPayload(module)
+
+	p.AddValueByInt(0, int32(1))                 // ch:0 , set value(int32)
+	p.AddValueByUint(1, uint32(1))               // ch:1 , set value(uint32)
+	p.AddValueByInt64(2, int64(1))               // ch:2 , set value(int64)
+	p.AddValueByUint64(3, uint64(1))             // ch:3 , set value(uint64)
+	p.AddValueByFloat(4, float32(1))             // ch:4 , set value(float)
+	p.AddValueByDouble(5, float64(1))            // ch:5 , set value(double)
+	p.AddValueByHexString(6, "0f1e2d3c4b5c6b7a") // ch:6 , set value(HexString)
+
+	err := sender.Send(p)
+	if err != nil {
+		panic(err)
+	}
+
+}
 
 ```
 
