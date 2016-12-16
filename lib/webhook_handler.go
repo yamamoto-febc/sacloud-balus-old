@@ -55,7 +55,8 @@ func (w *WebhookHandler) debuglog(f string, v ...interface{}) {
 }
 
 func (w *WebhookHandler) HandleRequest(p sakura.Payload) {
-
+	// TODO 同時リクエストや複数のモジュール対応は後で
+	
 	w.debuglog("[DEBUG] Start handle request\n")
 	// 開始リクエストを受けたらバッファをクリアする
 	if w.hasStartRequest(p) {
