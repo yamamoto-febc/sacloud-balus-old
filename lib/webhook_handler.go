@@ -156,7 +156,7 @@ func (w *WebhookHandler) hasRequestWithControlValue(p sakura.Payload, v int) boo
 
 func (w *WebhookHandler) createWave(data []byte) (string, error) {
 	var wavFormat = wav.File{
-		SampleRate:      1024 * 2,
+		SampleRate:      1024 * 8,
 		Channels:        1,
 		SignificantBits: 8,
 	}
