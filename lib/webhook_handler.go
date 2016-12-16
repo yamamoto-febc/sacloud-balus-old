@@ -95,7 +95,7 @@ func (w *WebhookHandler) HandleRequest(p sakura.Payload) {
 			return
 		}
 		defer file.Close()
-		//defer os.Remove(path)
+		defer os.Remove(path)
 
 		// wav変換後、Azureで音声判定を行う
 		speechToTextWorker := NewSpeechToTextWorker(w.option)
